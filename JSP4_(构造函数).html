@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构造函数实例</title>
+</head>
+<body>
+    <p id="display"></p>
+    <p id="showInfo"></p>
+    <script type="text/javascript">
+        //(1)构造函数————不建议
+        function NBAplayer(name,num,height,team) {
+            this.name=name;
+            this.num=num;
+            this.height=height;
+            this.team=team;
+            this.display=display;
+        }
+        function display() {
+            document.getElementById("display").innerHTML=this.name+";<br/>"+this.num+";<br/>"+this.height+";<br/>"+this.team+";<br/>"
+        }
+        var Np0 = new NBAplayer("Curry","30","191","GoldenStateWarriors");
+        Np0.display();
+
+        //(2)原型函数构造函数————建议用此法！
+        function OldDriver() {
+            OldDriver.prototype.name="Kimi";
+            OldDriver.prototype.age="34";
+            OldDriver.prototype.country="Finland";
+            OldDriver.prototype.showInfo=function () {
+                document.getElementById("showInfo").innerHTML=this.name+";<br/>"+this.age+";<br/>"+this.country+";";
+            }
+        }
+        var OD0 = new OldDriver();
+        OD0.name="Alonso";
+        OD0.showInfo();
+    </script>
+</body>
+</html>

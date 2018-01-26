@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除节点和替换节点</title>
+    <style type="text/css">
+        #first{
+            float: left;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+        #second{
+            float: left;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+        #first input{
+            position: relative;
+            top: 10px;
+            left: 170px;
+        }
+        #second input{
+            position: relative;
+            top: 10px;
+            left: 170px;
+        }
+    </style>
+    <script type="text/javascript">
+        function removePic()
+        {
+            var part1 = document.getElementsByTagName("div")[0];
+            var pic1 = document.getElementById("first_pic");
+            var btn1 = document.getElementById("btn1");
+            part1.removeChild(pic1);
+            part1.removeChild(btn1);
+        }
+        function changePic()
+        {
+            var part2 = document.getElementsByTagName("div")[1];
+            var pic2 = document.getElementById("second_pic");
+            var btn2 = document.getElementById("btn2");
+            var new_pic = document.createElement("img");
+            new_pic.setAttribute("src","image/Durant.jpg");
+            part2.replaceChild(new_pic,pic2);
+
+        }
+    </script>
+</head>
+<body>
+    <div id="first">
+        <img src="image/James.jpg" alt="显示错误，无法加载！" id="first_pic"/>
+        <br/>
+        <input type="button" id="btn1" value="删除我吧" onclick="removePic()">
+    </div>
+    <div id="second">
+        <img src="image/curry.jpg" alt="显示错误，无法加载！" id="second_pic"/>
+        <br/>
+        <input type="button" id="btn2" value="换换我吧" onclick="changePic()">
+    </div>
+</body>
+</html>

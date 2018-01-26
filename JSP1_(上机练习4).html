@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSP上机练习</title>
+    <script type="text/javascript">
+        //声明自定义函数，body的html将会调用它
+        function add_score()
+        {
+            //输入合法的科目数量
+            while(true)
+            {
+                var num = parseInt(prompt("请输入科目数量！",""));
+                if(isNaN(num))
+                {
+                    alert("输入非法！，请重新输入！");
+                }
+                else
+                {
+                    break;
+                }
+            }
+            var scores = new Array(num);
+
+            //将成绩依次输入数组保存
+            for(var i=0;i<num;i++)
+            {
+                while(true)
+                {
+                    scores[i] = parseInt(prompt("请输入考试成绩！",""));
+                    if(scores[i]<0)
+                    {
+                        alert("成绩不能为负数！重新输入！");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+            }
+            //遍历数组输出成绩
+            for(var j in scores)
+            {
+                document.write(scores[j]+"<br/>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--调用script的函数-->
+    <input type="button" name="btn" value="确定" onclick="add_score()"/>
+</body>
+</html>

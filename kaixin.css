@@ -1,0 +1,17 @@
+h1{
+    font-size:25px;
+    color:red;
+    background: navajowhite;
+}
+
+p:nth-of-type(2){
+    font-size:20px;
+    color:blue;
+    background: antiquewhite;
+}
+
+p[class="first"]{
+    font-size:20px;
+    color:blue;
+    background: antiquewhite;
+}

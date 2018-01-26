@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择你喜欢的球员</title>
+    <script type="text/javascript">
+        function changePic()
+        {
+            var elem = document.getElementsByName("Player");
+            var Photo = document.getElementById("image");
+            if(elem[0].checked)
+            {
+                Photo.setAttribute("src","image/curry.jpg");
+                Photo.setAttribute("title","斯蒂芬库里");
+                Photo.setAttribute("alt","图片显示错误！");
+                Photo.nextElementSibling.innerHTML="斯蒂芬库里——金州勇士";
+            }
+            else if(elem[1].checked)
+            {
+                Photo.setAttribute("src","image/James.jpg");
+                Photo.setAttribute("title","勒布朗詹姆斯");
+                Photo.setAttribute("alt","无法加载！");
+                Photo.nextElementSibling.innerHTML="勒布朗詹姆斯——克里夫兰骑士";
+            }
+        }
+
+        function img()
+        {
+            var str1 = document.getElementById("image").getAttribute("title");
+            var str2 = document.getElementById("image").getAttribute("alt");
+            alert(str1+" "+str2);
+        }
+    </script>
+</head>
+<body>
+    <p>
+        选择你喜欢的球员：
+        <input type="radio" name="Player" onclick="changePic()"/>斯蒂芬库里
+        <input type="radio" name="Player" onclick="changePic()"/>勒布朗詹姆斯
+    </p>
+    <img src="" alt="" title="" id="image" onclick="img()"/>
+    <p></p>
+</body>
+</html>

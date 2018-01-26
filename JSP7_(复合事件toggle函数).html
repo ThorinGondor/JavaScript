@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景交替界面</title>
+    <style type="text/css">
+        .red{
+            color: #a10000;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="点我更换背景">
+    <p>toggleClass示例</p>
+    <script src="JQuery/jquery-3.2.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input").toggle(function () {
+                $("body").css("background","red");
+            },function () {
+                $("body").css("background","blue");
+            },function () {
+                $("body").css("background","green");
+            },function () {
+                $("body").css("background","orange");
+            },function () {
+                $("body").css("background","yellow");
+            },function () {
+                $("body").css("background","green");
+            });
+            $("input").click(function () {
+                $("p").toggleClass("red");
+            });
+        });
+    </script>
+</body>
+</html>

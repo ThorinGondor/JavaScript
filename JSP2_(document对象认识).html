@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用document对象操作页面</title>
+    <script type="text/javascript">
+        function alterName()
+        {
+            document.getElementById("book").innerHTML="Forza7: Motorsport";
+        }
+
+        function getSeason()
+        {
+            var strs = document.getElementsByName("season");
+            var str="";
+            for(var i=0;i<strs.length;i++)
+            {
+                str = str+strs[i].value+"&nbsp;&nbsp;";
+            }
+            document.getElementById("display").innerHTML=str;
+        }
+        function getInput()
+        {
+            var strs=document.getElementsByTagName("input");
+            var str="";
+            for(var i=0;i<strs.length;i++)
+            {
+                str=str+strs[i].value+"&nbsp;&nbsp;";
+            }
+            document.getElementById("display").innerHTML=str;
+        }
+        function clearAll()
+        {
+            document.write("");
+        }
+        function closeWin()
+        {
+            var flag = window.confirm("确认要离开此页面吗？")
+            if(flag==true)
+            {
+                window.close();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <input type="button" value="点击退出" onclick="closeWin()">
+        <br/>
+        <img src="image/Forza.jpg" alt="显示错误无法加载！" width="480" height="270"/>
+        <div id="book">游戏名：极限竞速7</div>
+        <input type="button" name="btn0"  value="显示英文名" onclick="alterName()"/>
+        <input name="season" type="text" value="春"/>
+        <input name="season" type="text" value="夏"/>
+        <input name="season" type="text" value="秋"/>
+        <input name="season" type="text" value="冬"/>
+        <br/>
+        <input name="btn1" type="button" value="四季名称" onclick="getSeason()"/>
+        <input name="btn2" type="button" value="input内容" onclick="getInput()"/>
+        <input name="btn3" type="button" value="清空页面内容" onclick="clearAll()"/>
+        <p id="display">xxx</p>
+    </div>
+</body>
+</html>

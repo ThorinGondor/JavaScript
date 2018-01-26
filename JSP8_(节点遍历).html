@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点遍历</title>
+    <style type="text/css">
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+        li{
+            list-style-type: none;
+            margin: 10px;
+            padding: 5px;
+        }
+        ul{
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="first"><a href="">小米MAX手机重磅出炉！火爆销售中</a></li>
+        <li><a href="">苹果iPhone X铺货！最强机皇再现</a></li>
+        <li><a href="">三星何时推出新一代旗舰？工厂真的被搞爆炸了？</a></li>
+        <li><a href="">雷蛇也要做手机？RazerPhone现世，玩家买账吗？</a> </li>
+    </ul>
+    <script src="JQuery/jquery-3.2.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("ul li:eq(1)").next().css("background","orange");
+            $("ul li:eq(1)").prev().css("background","yellow");
+            $("ul li:eq(1)").siblings().css("border","1px solid red");
+            $("ul li:eq(2)").next().css("background","silver");
+            $("#first").parent().css("border","1px dashed blue");
+        });
+    </script>
+</body>
+</html>

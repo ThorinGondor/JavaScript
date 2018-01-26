@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东登录页</title>
+    <style type="text/css">
+        body{
+            background-color: #fcffb7;
+        }
+        .header_box{
+            width: 990px;
+            margin: auto;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #c57e83,white);
+        }
+        .header_pic{
+            float: left;
+            margin-left: 50px;
+        }
+        .header_txt{
+            font-family: 幼圆;
+            color: #4D4D4D;
+            float: left;
+            margin-top: 25px;
+            margin-left:20px;
+        }
+        .article_box{
+            width: 990px;
+            height: 557px;
+            margin: auto;
+            overflow: hidden;
+            background: url("image/Forza.jpg");
+            background-size: 990px 557px;
+        }
+        .log_box{
+            background: rgba(255, 255, 251, 0.7);
+            box-shadow: 10px 10px 10px gray;
+            border-radius: 5px;
+            width:300px;
+            float: right;
+            margin:50px;
+            padding: 10px;
+        }
+        .log_title_VIP{
+            float: left;
+        }
+        .log_title_instant{
+            float: right;
+        }
+        .log_username{
+            clear: left;
+            line-height: 30px;
+        }
+        .log_username input{
+            margin:10px;
+        }
+        .log_password{
+            clear: left;
+            line-height: 30px;
+        }
+        .log_password input{
+            margin:10px;
+        }
+        .log_auto{
+            clear: left;
+            float: left;
+            margin: 10px;
+        }
+        .forget_pass{
+            float: right;
+            margin: 10px;
+        }
+        a:hover{
+            color:purple;
+            font-style: oblique;
+        }
+        span{
+            font-size: 14px;
+            font-family: 幼圆;
+        }
+        a span{
+            color: red;
+            text-decoration: none;
+        }
+        .submit{
+            margin: 10px;
+            clear: left;
+            text-align: center;
+        }
+        .log_title_VIP p{
+            font-family: 黑体;
+            font-size: 20px;
+            color: red;
+        }
+        .log_title_instant p a{
+            font-family: 黑体;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_box">
+            <div class="header_pic">
+                <img src="image/JD.jpg" alt="显示错误，无法加载" title="京东首页" width="250" height="122"/>
+            </div>
+            <div class="header_txt">
+                <h3>欢迎登录</h3>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="article_box">
+            <div class="log_box">
+                <form>
+                    <div class="log_title">
+                        <div class="log_title_VIP"><p>京东会员</p></div>
+                        <div class="log_title_instant"><p><a href="http://www.baidu.com/index.html">立即注册</a></p></div>
+                    </div>
+                    <div class="log_username">
+                        <strong>账户名：</strong><input type="text" value="" required placeholder="邮箱/用户名/手机"/>
+                    </div>
+                    <div class="log_password">
+                        <strong>密&nbsp;&nbsp;&nbsp;码：</strong><input type="password" value="" required/>
+                    </div>
+                    <div class="log_auto">
+                        <input type="checkbox" value="auto_login"/><span>自动登录</span>
+                    </div>
+                    <div class="forget_pass">
+                        <a href="http://www.baidu.com/index.html"><span>忘记密码?</span></a>
+                    </div>
+                    <div class="submit">
+                        <input type="image" src="image/login.jpg" width="100px" height="49px"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bind函数演示</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        ul{
+            width: 100px;
+            padding: 0;
+            margin: 0;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        li{
+            list-style-type: none;
+            margin: 5px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="on">
+        <a href="" class="menu_btn"><strong>我的当当</strong></a>
+        <ul class="topdown">
+            <li><a href="">我的积分</a> </li>
+            <li><a href="">我的收藏</a> </li>
+            <li><a href="">我的余额</a> </li>
+            <li><a href="">我的评论</a> </li>
+            <li><a href="">电子书架</a> </li>
+        </ul>
+    </div>
+    <script src="JQuery/jquery-3.2.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(".topdown").hide();
+        $(document).ready(function () {
+
+            $(".on").bind({mouseover:function () {
+                $(".topdown").show();
+            },mouseout:function () {
+                $(".topdown").hide();
+            }});
+        });
+    </script>
+</body>
+</html>

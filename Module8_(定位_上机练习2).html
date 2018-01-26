@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>带按钮的图片横幅广告</title>
+    <style type="text/css">
+        #advertise{
+            width: 1280px;
+            height: 720px;
+            border: 1px solid red;
+            padding: 10px;
+            margin: 10px auto;
+            overflow: hidden;
+            background-image: url("image/FF15.jpg");
+            background-size: 1280px 720px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        #number{
+            border: 1px dashed gray;
+            padding: 10px;
+            margin: 10px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            float: right;
+        }
+        #number li{
+            float: left;
+            margin: 10px;
+            border: 1px solid green;
+            list-style-type: none;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            background-color: white;
+            text-align: center;
+        }
+        .erweima{
+            position: fixed;
+            right: 10px;
+            top:200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="advertise">
+        <div id="number">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+    </div>
+    <div class="erweima">
+        <a href="http://www.baidu.com/index.html"><img src="image/erweima.jpg"  title="点击链接" alt="显示错误，无法加载！" width="100" height="100"/></a>
+    </div>
+</body>
+</html>

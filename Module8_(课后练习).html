@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>热门游戏</title>
+    <style type="text/css">
+        body{
+            background: gray;
+        }
+        .box{
+            width: 600px;
+            overflow: hidden;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom,lightgray,white);
+            margin: auto;
+        }
+        .title{
+            width: 580px;
+            height: 50px;
+            overflow: hidden;
+            margin: auto;
+        }
+        #title_h3{
+            float: left;
+            line-height: 50px;
+            margin-left: 30px;
+        }
+        h3{
+            line-height: 16px;
+            color: red;
+         }
+        #title_link{
+            line-height: 20px;
+            position: relative;
+            left: 380px;
+            top:16px;
+            font-family: Consolas;
+            font-size: 20px;
+        }
+
+        #first{
+            height: 175px;
+        }
+        #first_pic{
+            position: relative;
+            top:20px;
+            left:20px;
+        }
+        #first_txt{
+            width: 300px;
+            height:135px;
+            overflow: hidden;
+            position: relative;
+            top: -120px;
+            left: 275px;
+        }
+        #first_txt p{
+            line-height: 20px;
+            font-size: 16px;
+            margin:5px;
+        }
+        #first_discount{
+            position: relative;
+            left:200px;
+            top:-260px;
+            z-index: 1;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: orange;
+            font-style: oblique;
+        }
+        #second{
+            height: 175px;
+            overflow: hidden;
+        }
+        #second_pic{
+            position: relative;
+            top:20px;
+            left: 20px;
+        }
+        #second_txt{
+            width: 300px;
+            height: 135px;
+            overflow: hidden;
+            position: relative;
+            top:-120px;
+            left: 275px;
+        }
+        #second_txt p{
+            line-height: 20px;
+            font-size: 16px;
+            margin:5px;
+        }
+        #third{
+            height: 175px;
+            overflow: hidden;
+        }
+        #third_pic{
+            position: relative;
+            top:20px;
+            left: 20px;
+        }
+        #third_txt{
+            width: 300px;
+            height: 135px;
+            overflow: hidden;
+            position: relative;
+            top:-120px;
+            left: 275px;
+        }
+        #third_txt p{
+            line-height: 20px;
+            font-size: 16px;
+            margin:5px;
+        }
+        /***动画效果***/
+        img:hover{
+            transform:scale(1.03);
+            background: darkslategray;
+        }
+        #sale:hover{
+            transform:rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            <div id="title_h3"><h3>近期大作</h3></div>
+            <a href="http://www.baidu.com/index.html" id="title_link"><strong>more</strong></a>
+        </div>
+        <div id="first">
+            <div id="first_pic">
+                <img src="image/Forza.jpg" alt="显示错误，无法加载！" title="Forza7" width="240" height="135"/>
+            </div>
+            <div id="first_txt">
+                <p><a href="http://www.baidu.com/index.html"><strong>微软独占大作：Forza7重磅推出！</strong></a></p>
+                <p><strong>日期：</strong>2017年10月中旬</p>
+                <p><strong>特点：</strong>700多辆赛车，200多条赛道，动态天气，完美的画质，优秀的操作手感。</p>
+            </div>
+            <div id="first_discount"><img src="image/discount.jpg" alt="显示错误，无法加载！" width="70" height="34" id="sale"></div>
+        </div>
+        <div id="second">
+            <div id="second_pic">
+                <img src="image/GTS.jpg" alt="显示错误，无法加载！" title="Forza7" width="240" height="135"/>
+            </div>
+
+            <div id="second_txt">
+                <p><a href="http://www.baidu.com/index.html"><strong>山内一典推出GTS！</strong></a></p>
+                <p><strong>日期：</strong>2017年10月中旬</p>
+                <p><strong>特点：</strong>完全拟真的手感，优秀的画面表现，全程联网，主打网络竞赛与对抗！</p>
+            </div>
+        </div>
+        <div id="third">
+            <div id="third_pic">
+                <img src="image/NBA2K.jpg" alt="显示错误，无法加载！" title="Forza7" width="240" height="135"/>
+            </div>
+
+            <div id="third_txt">
+                <p><a href="http://www.baidu.com/index.html"><strong>2K年货！NBA2K18今秋上市！</strong></a></p>
+                <p><strong>日期：</strong>2017年10月上旬</p>
+                <p><strong>特点：</strong>收录了NBA30支球队，20支历史球队，15支欧洲球队，同时进一步升级球员动作、画面质量和细节精细度！</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

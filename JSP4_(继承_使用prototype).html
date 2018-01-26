@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用原型链prototype进行继承</title>
+</head>
+<body>
+    <p id="display_father"></p>
+    <p id="display_son"></p>
+    <script type="text/javascript">
+        //（1）设计一个父类Animal
+        function Animal(){
+            Animal.prototype.eat="food";
+            Animal.prototype.drink="water";
+            Animal.prototype.live="earth";
+            Animal.prototype.showInfo=function () {
+                str="father:<br/>"+this.eat+";<br/>"+this.drink+";<br/>"+this.live+";<br/>";
+                document.getElementById("display_father").innerHTML=str;
+            }
+        }
+        var A0 = new Animal();
+        A0.showInfo();
+
+        //(2)设计一个子类cat
+        function Cat() {
+            //这里貌似我们没有设置任何cat的属性，但是由于我们在下面设置了Cat为Animal的子类，因此Cat继承了父类全部的属性
+            //下例为对父类showInfo方法的重写：
+            Cat.prototype.showInfo=function () {
+                str="son:<br/>"+this.eat+";<br/>"+this.drink+";<br/>"+this.live+";<br/>";
+                document.getElementById("display_father").innerHTML=str;
+                alert(str);
+            }
+        }
+        //该段代码很重要，Cat继承了父类Animal
+        Cat.prototype=new Animal();
+        var C0 = new Cat();
+        C0.eat="mouse";
+        var C1 = new Cat();
+        C1.eat="fish";
+
+        C0.showInfo(); //Father's function still can be used by ths son!
+        C1.showInfo();
+    </script>
+
+</body>
+</html>

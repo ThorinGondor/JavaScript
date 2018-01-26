@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSP的各类函数实例</title>
+</head>
+<body>
+   <script type="text/javascript">
+       //JSP函数功能的调用不需要对象，直接调用即可
+       //演示parseInt()和parseFloat()方法：
+       num=prompt("请输入第一个数字","");
+       var num1=parseInt(num);
+       var num3=parseFloat(num);
+       num=prompt("请输入第二个数字","");
+       var num2=parseInt(num);
+       var num4=parseFloat(num);
+
+       document.write(num1+"<br/>");
+       document.write(num2+"<br/>");
+       document.write(num3+"<br/>");
+       document.write(num4+"<br/>");
+
+       var time = parseInt(prompt("请输入次数！",""));
+       //函数的自定义：function AAA(){}，即可对该函数进行调用
+       function run()
+       {
+           for(var i=0;i<time;i++)
+           {
+               document.write("I love study!"+"<br/>");
+           }
+       }
+   </script>
+   <input name="btn" type="button" value="点击调用" onclick="run(time)"/>
+</body>
+</html>

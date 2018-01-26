@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>带关闭按钮的广告</title>
+    <style type="text/css">
+        #adver{
+            width: 480px;
+            height: 270px;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            margin: 0;
+            box-shadow: #4D4D4D 10px 10px 10px;
+        }
+        #adver input{
+            margin: 0;
+            z-index: 100;
+            position: relative;
+            top:-270px;
+            left: 415px;
+        }
+    </style>
+    <script type="text/javascript">
+        function closeAdver() {
+            document.getElementById("adver").style.display="none";
+        }
+        var adverTop;
+        var adverLeft;
+        var adverOBJ;
+        function init() {
+            adverOBJ = document.getElementById("adver");
+            if(adverOBJ.currentStyle)
+            {
+                adverTop = parseInt(adverOBJ.currentStyle.top);
+                adverLeft = parseInt(adverOBJ.currentStyle.left);
+            }
+            else
+            {
+                adverTop = parseInt(document.defaultView.getComputedStyle(adverOBJ,null).top);
+                adverLeft = parseInt(document.defaultView.getComputedStyle(adverOBJ,null).left);
+            }
+        }
+        function move() {
+            var scrollTop = parseInt(document.documentElement.scrollTop||document.body.scrollTop);
+            var scrollLeft = parseInt(document.documentElement.scrollLeft||document.body.scrollLeft);
+            adverOBJ.style.top = adverTop+scrollTop+"px";
+            adverOBJ.style.left = adverLeft+scrollLeft+"px";
+        }
+        window.onload=init;
+        window.onscroll=move;
+    </script>
+</head>
+<body>
+    <div id="adver">
+        <img src="image/Forza.jpg" width="480" height="270" alt="显示错误，无法加载！"/>
+        <input type="image" src="image/login.jpg" width="60.2" height="30" onclick="closeAdver()">
+    </div>
+    <div id="main">
+        <img src="image/Porsche.jpg" alt="显示错误，无法加载！" width="1920" height="1080"/>
+        <img src="image/NFS20.jpg" alt="显示错误，无法加载！" width="1920" height="1080"/>
+    </div>
+</body>
+</html>

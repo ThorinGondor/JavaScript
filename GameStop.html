@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameStop</title>
+    <style type="text/css">
+        .box1{
+            width: 550px;
+            overflow: hidden;
+            box-sizing: border-box;
+            border: 1px solid red;
+            float: left;
+            margin-left:50px;
+            margin-right: 1px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        .box1 img{
+            float: right;
+        }
+        .box2{
+            float: left;
+            margin-left: 1px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border: 1px solid red;
+        }
+        .box2 ul{
+            margin: 0;
+            float: left;
+            padding: 0;
+        }
+        .box2 ul li:nth-child(1){
+            width:550px;
+            float: left;
+            margin: 2px;
+            border: 1px dashed green;
+            list-style-type: none;
+            padding: 10px;
+        }
+        .box2 ul li:nth-child(2){
+            width:550px;
+            float: left;
+            margin: 2px;
+            border: 1px dashed green;
+            list-style-type: none;
+            padding: 10px;
+        }
+        .box2 ul li:nth-child(3){
+            width:550px;
+            clear: both;
+            float: left;
+            margin: 2px;
+            border: 1px dashed green;
+            list-style-type: none;
+            padding: 10px;
+        }
+        .box2 ul li:nth-child(4){
+            width:550px;
+            float: left;
+            margin: 2px;
+            border: 1px dashed green;
+            list-style-type: none;
+            padding: 10px;
+        }
+        .box1 img{
+            float: right;
+            transition: all 1s ease-out;
+        }
+        .box1 img:hover{
+            transform: translate(-12px);
+        }
+        .box2 ul li img{
+            float: right;
+            transition: all 1s ease-out;
+        }
+        .box2 ul li img:hover{
+            transform: translate(-12px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h3>跑车浪漫旅！GTS推出！</h3>
+        <p>山内一典这么多年就憋出个网游，真不是个东西！老而不死是为贼！</p>
+        <img src="image/GTS.jpg" width="480" height="270" alt="Gran Tursimo Sport"/>
+    </div>
+    <div class="box2">
+        <ul>
+            <li id="1st">
+                <h3>微软独占大作：极限竞速地平线7！</h3>
+                <p>700辆赛车，100条赛道，完美画面，动态天气，驾驶爱好者必入！</p>
+                <img src="image/Forza.jpg" width="240" height="135" alt="Forza 7"/>
+            </li>
+            <li id="2nd">
+                <h3>极品飞车20即将上市！</h3>
+                <p>速度与激情，劫车与警匪齐飞，更有广阔的沙盘世界等您探索。</p>
+                <img src="image/NFS20.jpg" width="240" height="135" alt="NFS20"/>
+            </li>
+            <li id="3rd">
+                <h3>伟大的日式RPG：最终幻想15降临！</h3>
+                <p>王子诺克提斯和同伴的旅行，以及露娜芙蕾雅和王子的浪漫爱情，拯救王国的重任肩负在他们身上。</p>
+                <img src="image/FF15.jpg" width="240" height="135" alt="FF15"/>
+            </li>
+            <li id="4th">
+                <h3>WB公司再出新作：中土世界：战争之影！</h3>
+                <p>超爽的打击感，塔里昂的复仇之路，精灵王的寻戒之路，永不停息！兽人的逆袭永远在路上！还在等什么！</p>
+                <img src="image/ShadowOfWar.jpg" width="240" height="135" alt="Middle"/>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

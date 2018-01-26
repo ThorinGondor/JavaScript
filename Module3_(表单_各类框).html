@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单_各类框</title>
+</head>
+<body>
+     <form>
+
+         <!--表单之文本框、密码框-->
+         <p>
+             名字：&nbsp;<input name="first_name" type="text" value="NULL"/>
+         </p>
+         <p>
+             姓氏：&nbsp;<input name="last_name" type="text" value="NULL" maxlength="10"/>
+         </p>
+         <p>
+             密码：&nbsp;<input name="pass_code" type="password" maxlength="6" size="6"/>
+         </p>
+
+         <!--表单之单选按钮-->
+         <p>
+             <input name="gender" type="radio" value="male"/>男
+             <input name="gender" type="radio" value="female"/>女
+         </p>
+         <p>
+             <input name="job" type="radio" value="worker"/>工人
+             <input name="job" type="radio" value="student"/>学生
+             <input name="job" type="radio" value="cook"/>厨师
+         </p>
+
+         <!--表单之复选框-->
+         <p>
+             <input name="interest" type="checkbox" value="sport"/>运动
+             <input name="interest" type="checkbox" value="chat"/>聊天
+             <input name="interesr" type="checkbox" value="video_game"/>玩游戏
+         </p>
+
+         <!--表单之列表框-->
+         <p>
+             出生月份：
+             <select name="birth_month">
+                 <option value="">[选择月份]</option>
+                 <option value="1">一月份</option>
+                 <option value="2">二月份</option>
+                 <option value="3">三月份</option>
+                 <option value="4">四月份</option>
+                 <option value="5">五月份</option>
+             </select>
+         </p>
+         <p>
+            出生年份：
+             <select>
+                 <option value="">[选择年份]</option>
+                 <option value="1">2000</option>
+                 <option value="2">2001</option>
+                 <option value="3">2002</option>
+                 <option value="4">2003</option>
+             </select>
+         </p>
+
+         <!--表单之按钮-->
+         <p>
+             <input name="click_reset" type="reset" value="重填"/>
+             <input name="click_submit" type="submit" value="提交"/>
+             <input name="click_button" type="button" value="普通按钮"/>
+         </p>
+
+         <!--表单之多行文本域-->
+         <P>
+             <h3>请给出您的个人建议：</h3>
+             <textarea name="text_area" cols="50" rows="10">
+                 请给出您的建议，感谢！
+             </textarea>
+         </P>
+
+         <!--表单之文件域-->
+         <P>
+             <input type="file" name="select_files"/>
+             <br/>
+             <input type="submit" name="click_submit" value="点击上传"/>
+         </P>
+
+         <!--表单之邮箱-->
+         <P>
+             <input type="email" name="email"/>
+             <input type="submit" name="click_submit" value="提交邮箱地址"/>
+         </P>
+
+         <!--表单之url网址-->
+         <P>
+             <input type="url" name="user_url" value="http://"/>
+             <input type="submit" name="click_submit" value="点击提交网址"/>
+         </P>
+
+         <!--表单之数字-->
+         <P>
+             <input type="number" name="num" min="0" max="500" step="10"/>
+             <input type="submit" name="c_submit" value="点击提交数字"/>
+         </P>
+
+         <!--表单之滑块-->
+         <P>
+             <input type="range" name="TrackBar" min="0" max="100" step="2"/>
+             <input type="submit" name="c_submit" value="点击提交滑块数值"/>
+         </P>
+     </form>
+</body>
+</html>

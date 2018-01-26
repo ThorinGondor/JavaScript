@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS列表样式</title>
+    <style>
+        h1{
+            font-size: 30px;
+        }
+        li{
+            font-size: 25px;
+            line-height: 30px;
+            text-indent: 1em;
+            list-style-type: none;/**可以修改原先传统的圆点符号为别的符号，例如square（实心正方形）、disc（实心圆）、decimal（数字）、none（无标记符号）**/
+        }
+        .title{
+            font-size: 18px;
+            font-weight: bold;
+            text-indent: 2em;
+            line-height:35px;
+        }
+        a:hover{
+            color: #f60;
+            font-style: oblique;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!--传统的ul下的li都是自带圆点符号开头的-->
+    <h1>克里夫兰骑士</h1>
+    <ul>
+
+        <li><P>德里克罗斯</P></li>
+        <li><P>德维恩韦德</P></li>
+        <li><p>勒布朗詹姆斯</p></li>
+        <li><p>杰克劳德</p></li>
+        <li><p>凯文乐福</p></li>
+    </ul>
+    <!--下示详细例程，展示如何去除默认的小圆点的-->
+    <h2 class="title">全部商品分类</h2>
+    <ul>
+        <li><a href="http://www.taobao.com/index.html">图书</a>&nbsp;&nbsp;<a href="http://www.taobao.com/index.html">音像</a>&nbsp;&nbsp;<a href="http://www.taobao.com/index.html">数字商品</a></li>
+        <li><a href="http://www.taobao.com/index.html">家用电器</a>&nbsp;<a href="http://www.taobao.com/index.html">手机</a>&nbsp;&nbsp;<a href="http://www.taobao.com/index.html">数码</a></li>
+        <li><a href="http://www.taobao.com/index.html">家居</a>&nbsp;<a href="http://www.taobao.com/index.html">家装</a>&nbsp;&nbsp;<a href="http://www.taobao.com/index.html">厨具</a></li>
+    </ul>
+</body>
+</html>

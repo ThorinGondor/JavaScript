@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position属性</title>
+    <style type="text/css">
+        #father{
+            border: 2px solid black;
+            margin: auto;
+        }
+        #first{
+            border: 1px dashed red;
+            background-color: blue;
+            color: white;
+            margin:10px;
+        }
+        #second{
+            border: 1px dashed red;
+            background-color: green;
+            color: white;
+            margin:10px;
+
+            position: fixed; /**与absolute不同，它使得元素即时在页面滚动时也不会随着页面滚动，适合用作固定导航栏，是最高程度的固定方法**/
+            right: 0;
+            top: 0;
+        }
+        #third{
+            border: 1px dashed red;
+            background-color: orangered;
+            color: white;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="father">
+        <div id="first">
+            <p>第一个盒子</p>
+        </div>
+        <div id="second">
+            <p>第二个盒子</p>
+        </div>
+        <div id="third">
+            <p>第三个盒子</p>
+        </div>
+    </div>
+</body>
+</html>

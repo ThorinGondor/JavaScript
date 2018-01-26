@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS高级选择器</title>
+    <style type="text/css">
+        /*设置边界，只是用于便于观察*/
+        p,ul{
+            border: 1px solid red;
+        }
+        /*后代选择器*/
+        /*body p{
+            background: red;
+        }*/
+        /*子选择器*/
+        /*body>p{
+            background: red;
+        }*/
+        /*相邻兄弟选择器*/
+        /*.active+p{
+            background:red;
+        }*/
+        /*通用兄弟选择器*/
+        .active~p{
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <p>1</p>
+    <p class="active">2</p>
+    <p>3</p>
+    <p>4</p>
+    <ul>
+        <li>
+            <p>1</p>
+        </li>
+        <li>
+            <p>2</p>
+        </li>
+        <li>
+            <p>3</p>
+        </li>
+        <li>
+            <p>4</p>
+        </li>
+    </ul>
+</body>
+</html>

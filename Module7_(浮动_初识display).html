@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第七章-浮动-display属性</title>
+    <style>
+        .box1{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            border:1px solid red;
+            display: inline-block; /***形状上显示为块元素block，同时又具有inline行元素的特点：无换行符。该属性可以实现多个div块排在一行***/
+            margin: 0;
+            padding: 10px;
+        }
+        .box2{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            border:1px solid red;
+            display: inline-block; /***形状上显示为块元素block，同时又具有inline行元素的特点：无换行符。该属性可以实现多个div块排在一行***/
+            margin: 0;
+            padding: 10px;
+        }
+        span{
+            box-sizing: border-box;
+            width: 100px;
+            height:100px;
+            border:1px solid blue;
+            display: inline-block;
+            margin: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        我是div块元素-box1
+    </div>
+    <div class="box2">
+        我是div块元素-box2
+    </div>
+    <span>
+        我是span行内元素
+    </span>
+</body>
+</html>

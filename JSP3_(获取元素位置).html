@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>漂浮的巴恩斯</title>
+    <style type="text/css">
+        #Barnes{
+            background-color: #D7D7D7;
+            position: relative;
+            top: 100px;
+            width: 133px;
+            height: 200px;
+            box-shadow: gray 10px 10px 10px;
+        }
+        #Barnes input{
+            z-index: 100;
+            position: relative;
+            top: -200px;
+        }
+    </style>
+    <script type="text/javascript">
+        var barnesTop;
+        var barnesLeft;
+        var barnesOBJ;
+
+        function init() {
+            barnesOBJ = document.getElementById("Barnes");
+            if(barnesOBJ.currentStyle)
+            {
+                barnesTop = parseInt(document.currentStyle.top);
+                barnesLeft = parseInt(document.currentStyle.left);
+            }
+            else
+            {
+                barnesTop = parseInt(document.defaultView.getComputedStyle(barnesOBJ,null).top);
+                barnesLeft = parseInt(document.defaultView.getComputedStyle(barnesOBJ,null).left);
+            }
+        }
+
+        function move() {
+            var scrollTop = parseInt(document.documentElement.scrollTop||document.body.scrollTop);
+            var scrollLeft = parseInt(document.documentElement.scrollLeft||document.body.scrollLeft);
+            barnesOBJ.style.top = barnesTop+scrollTop+"px";
+            barnesOBJ.style.left = barnesLeft+scrollLeft+"px";
+        }
+        function closeWin() {
+            document.getElementById("Barnes").style.display="none";
+        }
+        window.onload=init;
+        window.onscroll=move;
+    </script>
+</head>
+<body>
+    <div id="Barnes">
+        <img src="image/Barnes.jpg" alt="显示错误，无法加载！" width="133" height="200"/>
+        <input type="image" src="image/login.jpg" width="60.2" height="30" onclick="closeWin()">
+    </div>
+    <div id="main">
+        <img src="image/curry.jpg" alt="显示错误，无法加载！" title="StephenCurry">
+        <img src="image/Durant.jpg" alt="显示错误，无法加载！" title="KevinDurant">
+        <img src="image/James.jpg" alt="显示错误，无法加载！" title="LebronJames">
+        <img src="image/Leonard.jpg" alt="显示错误，无法加载！" title="KawhiLeonard">
+        <img src="image/Leonard.jpg" alt="显示错误，无法加载！" title="KawhiLeonard">
+        <img src="image/James.jpg" alt="显示错误，无法加载！" title="LebronJames">
+        <img src="image/Leonard.jpg" alt="显示错误，无法加载！" title="KawhiLeonard">
+        <img src="image/Durant.jpg" alt="显示错误，无法加载！" title="KevinDurant">
+        <img src="image/Durant.jpg" alt="显示错误，无法加载！" title="KevinDurant">
+        <img src="image/James.jpg" alt="显示错误，无法加载！" title="LebronJames">
+        <img src="image/curry.jpg" alt="显示错误，无法加载！" title="StephenCurry">
+        <img src="image/Durant.jpg" alt="显示错误，无法加载！" title="KevinDurant">
+        <img src="image/curry.jpg" alt="显示错误，无法加载！" title="StephenCurry">
+        <img src="image/Leonard.jpg" alt="显示错误，无法加载！" title="KawhiLeonard">
+        <img src="image/curry.jpg" alt="显示错误，无法加载！" title="StephenCurry">
+    </div>
+</body>
+</html>

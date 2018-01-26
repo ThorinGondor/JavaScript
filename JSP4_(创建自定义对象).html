@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建自定义对象</title>
+</head>
+<body>
+    <p id="display1"></p>
+    <p id="display2"></p>
+    <!-----------------------------JavaScript----------------------------->
+    <script type="text/javascript">
+        var Person = new Object();
+        Person.name = "克莱汤普森";
+        Person.age="28";
+        Person.job="美职篮篮球运动员";
+        Person.address="美国旧金山硅谷地区";
+        Person.intro=function(){
+            var str=this.name+";<br/>"+this.age+";<br/>"+this.job+";<br/>"+this.address;
+            document.getElementById("display1").innerHTML=str;
+        }
+        Person.intro();
+
+        var VisionCard = {
+            name:"GTX 1080",
+            factory:"Nvidia",
+            price:"5300",
+            made_in:"China",
+            showInfo:function () {
+                var str = this.name+"; "+this.factory+"; "+this.price+"; "+this.made_in;
+                document.getElementById("display2").innerHTML=str;
+            }
+        }
+        VisionCard.showInfo();
+    </script>
+</body>
+</html>

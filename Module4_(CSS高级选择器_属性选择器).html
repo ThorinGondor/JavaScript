@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS使用属性选择器</title>
+    <style>
+        .demo a{
+            float:left;
+            display: block;
+            height: 50px;
+            width:50px;
+            border-radius:10px;
+            text-align: center;
+            background:#AAC;
+            color:blue;
+            font:bold 20px/50px Arial;
+            margin-right: 5px;
+            text-decoration: none;
+            margin:5px;
+        }
+        /**属性选择器：E[attr]，选中具有id属性以及target属性的所有a元素**/
+        a[id][target]{background:yellow;}
+        /**E[attr=val]选择具有id属性且id值为first的所有a元素**/
+        a[id="first"]{background:red;}
+        /****/
+        a[class^="link"][href*="mp3"]{background: green;}
+    </style>
+</head>
+<body>
+    <p class="demo">
+        <a href="http://www.baidu.com/index.html" class="link item first" id="first" title="打开百度网页">1</a>
+        <a href="http://www.sina.com/index.html" class="link active item" title="test website" target="_blank">2</a>
+        <a href="image//watson.jpg" class="link item" title="打开沃森图片">3</a>
+        <a href="text//Destination.txt" class="link item">4</a>
+        <a href="efc" class="link item" title="website link">5</a>
+        <a href="video//樱花抄.mp3" class="link item" title="播放MP3文件">6</a>
+        <a href="image//Barnes.jpg" class="link item" title="召唤阿巴" id="second" target="_blank">7</a>
+    </p>
+</body>
+</html>

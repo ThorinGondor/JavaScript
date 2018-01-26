@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery：$(),selector,action()</title>
+    <style type="text/css">
+        li{
+            list-style-type: none;
+            line-height: 22px;
+            cursor: pointer;
+        }
+        .Brief{
+            background: #a7a7a7;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="Brief">JQuery简介</li>
+        <li id="activate">JQuery语法</li>
+        <li>JQuery选择器</li>
+        <li>JQuery事件与动画</li>
+        <li>JQuery方法</li>
+    </ul>
+    <script src="JQuery/jquery-3.2.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //总的来说，就是通过$和selector来选中元素，然后利用事件进行一顿操作
+        $(document).ready(function () {
+            //selector选中id=activate的元素
+            $("#activate").click(function () {
+                //selector选中id=Brief的元素，addClass选中class=Brief的元素
+                $("#Brief").addClass("Brief");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS结构伪类选择器</title>
+    <style>
+        /**body的第一个子元素p**/
+        p:first-child{
+            background: yellow;
+        }
+        /**body的第n个子元素p**/
+        p:nth-child(2){
+            color:white;
+            background:blue;
+        }
+        /**body的最后一个具有指定类型（p）的元素p**/
+        p:last-of-type{
+            color:white;
+            background: purple;
+        }
+        /**body的具有指定类型（p）的第n个元素p**/
+        p:nth-of-type(3){
+            color:white;
+            background:green;
+        }
+        p:nth-of-type(4){
+            color:white;
+            background:black;
+        }
+        /**ul的第一个子元素li**/
+        ul li:first-child{
+            color:white;
+            background:red;
+        }
+        /**ul的最后一个子元素li**/
+        ul li:last-child{
+            color:white;
+            background:green;
+        }
+        /**ul的第三个子元素li**/
+        ul li:nth-child(3){
+            color:white;
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul>
+</body>
+</html>

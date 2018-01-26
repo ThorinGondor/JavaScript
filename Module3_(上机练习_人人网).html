@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人人网注册页面</title>
+</head>
+<body>
+    <header>
+        <image src="image//renren.jpg" title="人人网主页" alt="显示错误无法加载！" width="500" height="242"/>
+    </header>
+    <section>
+        <form><!--别忘了写form！-->
+            <p>
+                电子邮箱：&nbsp;<input type="email" name="email" required/>
+            </p>
+            <p>
+                设置密码：&nbsp;<input type="password" name="pass_code" value="" maxlength="15" required/>
+            </p>
+            <p>
+                真实姓名：&nbsp;<input type="text" name="name" value="" required/>
+            </p>
+            <p>
+                性别：&nbsp;<input type="radio" name="gender" id="male" required/> <label for="male">男</label>
+                <input type="radio" name="gender" id="female" required/> <label for="female">女</label>
+            </p>
+            <p>
+                生日：&nbsp;
+                <select>
+                    <option value="1">[选择年份]</option>
+                    <option value="2">1990</option>
+                    <option value="3">1991</option>
+                    <option value="4">1992</option>
+                    <option value="5">1993</option>
+                    <option value="6">1994</option>
+                    <option value="7">1995</option>
+                    <option value="8">1996</option>
+                    <option value="9">1997</option>
+                    <option value="10">1998</option>
+                    <option value="11">1999</option>
+                </select>&nbsp;年&nbsp;
+                <select>
+                    <option value="1">[选择月份]</option>
+                    <option value="2">1</option>
+                    <option value="3">2</option>
+                    <option value="4">3</option>
+                    <option value="5">4</option>
+                    <option value="6">5</option>
+                    <option value="7">6</option>
+                    <option value="8">7</option>
+                    <option value="9">8</option>
+                    <option value="10">9</option>
+                    <option value="11">10</option>
+                    <option value="12">11</option>
+                    <option value="13">12</option>
+                </select>&nbsp;月&nbsp;
+                <select>
+                    <option value="1">[日期选择]</option>
+                    <option value="2">1</option>
+                    <option value="3">2</option>
+                    <option value="4">3</option>
+                    <option value="5">4</option>
+                    <option value="6">5</option>
+                    <option value="7">6</option>
+                    <option value="8">7</option>
+                    <option value="9">8</option>
+                    <option value="10">9</option>
+                    <option value="11">10</option>
+                    <option value="12">11</option>
+                    <option value="13">12</option>
+                </select>&nbsp;日&nbsp;
+            </p>
+            <p>
+                <a href="http://www.baidu.com/index.html" target="_blank">为什么要填写我的生日？</a>
+            </p>
+
+            <p>
+                我现在：&nbsp;
+                <select>
+                    <option value="0">[请选择]</option>
+                    <option value="1">在读本科</option>
+                    <option value="2">在读硕士</option>
+                    <option value="3">已经工作</option>
+                </select>
+                （非常重要）
+            </p>
+
+            <p>
+                验证：&nbsp;<input type="text" name="text"/>
+                <input type="submit" name="click_submit" value="立即注册"/>
+                <input type="reset" name="click_reset" value="重置"/>
+            </p>
+
+            <p>
+                <!--表单初级验证，使用placehoder方法来给予暗示-->
+                <input type="search" name="sousuo" placeholder="请键入您要输入的关键字"/>
+                <input type="submit" name="click_submit" value="Go"/>
+            </p>
+        </form>
+
+    </section>
+</body>
+</html>

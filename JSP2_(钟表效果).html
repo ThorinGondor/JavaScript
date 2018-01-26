@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+    <script type="text/javascript">
+        function disptime()
+        {
+            var today = new Date();
+            var current_year = today.getFullYear();
+            var current_month = today.getMonth();
+            var current_date = today.getDate();
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var second = today.getSeconds();
+            var millisecond = today.getMilliseconds();
+            document.getElementById("time").innerHTML=current_year+"年"+current_month+"月"+current_date+"日&nbsp;&nbsp;"+hour+":"+minute+":"+second+":"+millisecond;
+        }
+        var time=setInterval("disptime()",1);
+    </script>
+</head>
+<body>
+    <p id="time"></p>
+</body>
+</html>

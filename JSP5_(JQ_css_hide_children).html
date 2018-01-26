@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery的css、hide、show、children方法演示</title>
+    <style type="text/css">
+        .menu{
+            width: 100px;
+            border: 1px dotted blue;
+            text-align: center;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background: linear-gradient(to top,gray,whitesmoke);
+        }
+        menu p{
+            line-height: 30px;
+        }
+
+        .catagory{
+            width: 100px;
+            border: 1px dotted black;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            margin: 2px;
+            border: 1px dashed green;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <section class="menu">
+            <p><strong>我的当当</strong></p>
+        </section>
+        <div class="catagory">
+            <ul>
+                <li><a href="http://www.sina.com/index.html">我的订单</a></li>
+                <li><a href="http://www.baidu.com/index.html">我的收藏</a></li>
+                <li><a href="http://www.hupu.com/index.html">我的礼品卡</a></li>
+                <li><a href="http://www.apple.com/index.html">我的积分</a></li>
+                <li><a href="http://www.cctv.com/index.html">我的余额</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="JQuery/jquery-3.2.1.js" type="text/javascript"></script>
+    <script>
+        $("document").ready(function () {
+            $("ul").hide();
+            $("section").mouseover(function () {
+                $("ul").show();
+                $("ul").css("background","gray");
+                $("li").children("a").css("color","white");
+            });
+            $("ul").mouseleave(function () {
+                $("ul").hide();
+            });
+        })
+    </script>
+</body>
+</html>

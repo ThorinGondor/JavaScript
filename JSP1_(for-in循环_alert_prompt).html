@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSP基础实例</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //alert和prompt用法：
+        alert("JSP演示开始！");
+        name=prompt("请输入您的姓名","");
+        document.write("你的用户名是："+name);
+
+        //定义一个字符串
+        var str='Kimi,Alonso,Vettel,Schumacher';
+        //根据“,”切割字符串，分别存入数组：
+        var arr=str.split(',');
+        //遍历输出数组：
+        for(var i in arr)
+        {
+            document.write(arr[i]+'<br/>');
+        }
+
+    </script>
+</body>
+</html>

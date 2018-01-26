@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框border演示</title>
+    <style type="text/css">
+        /**整个盒子box**/
+        .box{
+            width:300px;
+            border:2px solid #3A6587;
+            margin:0px auto;  /**让整个盒子居中**/
+        }
+        h1{
+            font-size:20px;
+            font-family: 隶书;
+            background:linear-gradient(to top,black,#3A6587);
+            height:35px;
+            line-height:35px;
+            color: #feffdb;
+            text-indent: 2em;
+            margin: 0px;  /**消除h2的外边距，原先的空隙（即外边距）消失，这样更美观**/
+        }
+        form{
+            background: linear-gradient(to bottom, #959da2,#c0cad1);
+            padding:20px; /**设置表单内边距，使得整个表单里的内容和表单边界有了明显的距离，不再显得过近**/
+        }
+        div div:nth-of-type(1) input{
+            border:2px solid darkslategray;
+            margin-bottom:5px;    /**外边距设定为5px，这样各个div之间有了距离，更美观**/
+        }
+        div div:nth-of-type(2) input{
+            border:2px dashed red;
+            margin-bottom:5px;   /**外边距设定为5px，这样各个div之间有了距离，更美观**/
+        }
+        div div:nth-of-type(3) input{
+            border:2px dotted brown;
+            margin-bottom:5px;    /**外边距设定为5px，这样各个div之间有了距离，更美观**/
+        }
+        div div:nth-of-type(4) input{
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>会员登录</h1>
+        <form>
+            <div>
+                <strong>姓名：</strong><input type="text" name="username" value="" required placeholder="请输入您的真实姓名"/>
+            </div>
+            <div>
+                <strong>邮箱：</strong><input type="email" name="email" value="" required placeholder="请输入您的真实邮箱"/>
+            </div>
+            <div>
+                <strong>密码：</strong><input type="password" name="pass_code" value="" pattern="\d{11}" placeholder="请输入您的11位密码"/>
+            </div>
+            <div>
+                <input type="submit" name="click_submit" value="点击提交"/>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

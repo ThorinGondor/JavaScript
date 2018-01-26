@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script type="text/javascript">
+        /*
+        //window.location = "" 跳转到该网页
+        window.location="http://www.apple.com";
+        */
+        function run()
+        {
+            //confirm窗口返回布尔值
+            var flag = confirm("要关闭该网站吗？");
+            if(flag==true)
+            {
+                window.close();  //window.close();关闭网页
+            }
+            else
+            {
+                window.open("http://www.baidu.com");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <!--该按钮调用script的函数run();-->
+    <img src="image/curry.jpg" alt="显示错误，无法加载！"/>
+    <br/>
+    <input type="button" name="btn" value="关闭网页" onclick="run()"/>
+    <br/>
+    <a href="JSP2_test.html">查看详情</a>
+    <br/>
+    <a href="javascript:location.reload()">刷新本页</a>
+</body>
+</html>

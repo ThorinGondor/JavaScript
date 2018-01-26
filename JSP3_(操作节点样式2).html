@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车浏览系统</title>
+    <style type="text/css">
+        #cart{
+            width: 130px;
+            border: 1px solid red;
+        }
+        #cart h3{
+            text-align: center;
+            line-height: 30px;
+        }
+        #cartList{
+              display: none;
+        }
+        #shopping .cartListOver{
+            display: block;
+            width: 350px;
+            padding: 15px;
+            border: 1px solid red;
+        }
+        #shopping .cartListOut{
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function over() {
+            document.getElementById("cartList").className="cartListOver";
+        }
+        function out() {
+            document.getElementById("cartList").className="cartListOut";
+        }
+    </script>
+</head>
+<body>
+    <div id="shopping">
+        <div id="cart" onmouseover="over()" onmouseout="out()">
+            <h3>我的购物车<span>1</span></h3>
+        </div>
+        <div id="cartList">
+            <h4>最新加入的商品</h4>
+            <ul>
+                <li><img src="image/Forza.jpg" alt="显示错误，无法加载！" width="160" height="90"/></li>
+                <li>极限竞速：地平线3</li>
+                <li>价格：230元</li>
+                <li>删除</li>
+            </ul>
+            <div class="footer">
+                共一件商品<span>共计230元</span>
+                <span id="footer_goto">去购物车</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上机练习_继承_使用构造函数</title>
+</head>
+<body>
+    <p id="father"></p>
+    <p id="son"></p>
+    <script type="text/javascript">
+        function Person(nation,skinColor) {
+            this.nation=nation;
+            this.skinColor=skinColor;
+            this.getNation=function () {
+                alert(this.nation);
+            };
+            this.getColor=function () {
+                alert(this.skinColor);
+            };
+        }
+
+        function Woman(nation,skinColor,sex) {
+            //call方法继承属性
+            Person.call(this,nation,skinColor);
+            this.sex=sex;
+            this.getSex=function () {
+                alert(this.sex);
+            };
+            this.printOnWin=function () {
+                str=this.nation+"<br/>"+this.skinColor+"<br/>"+this.sex;
+                document.getElementById("son").innerHTML=str;
+            };
+        }
+        //该段代码实现继承
+        Woman.prototype = new Person();
+        var w0 =new Woman("日耳曼族","白色","女性");
+        w0.getNation();
+        w0.getColor();
+        w0.getSex();
+        w0.printOnWin();
+    </script>
+</body>
+</html>

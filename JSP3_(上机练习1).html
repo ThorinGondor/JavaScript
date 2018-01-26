@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车解算界面</title>
+    <script type="text/javascript">
+        function sum_up()
+        {
+            var obj=document.getElementById("content1");
+            var price1=obj.lastElementChild.firstElementChild.value;
+            var num1=obj.lastElementChild.lastElementChild.value;
+            var sum1=price1*num1;
+            window.alert(price1*num1);
+            obj=document.getElementById("content2");
+            var price2=obj.lastElementChild.firstElementChild.value;
+            var num2=obj.lastElementChild.lastElementChild.value;
+            var sum2=price2*num2;
+            window.alert(price2*num2);
+            document.getElementById("sumup").innerHTML = "总计："+(sum1+sum2);
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div id="content1">
+            <img src="image/NFS20.jpg" alt="显示错误，无法加载！" width="320" height="180"/>
+            <form>
+                <input type="number" value="21.90" readonly/>
+                <input type="number" value="2"/>
+            </form>
+        </div>
+        <div id="content2">
+            <img src="image/Forza.jpg" alt="显示错误，无法加载！" width="320" height="180"/>
+            <form>
+                <input type="number" value="20.50" readonly/>
+                <input type="number" value="3"/>
+            </form>
+        </div>
+        <div id="sum">
+            <form>
+                <input type="button" value="结算" name="btn" onclick="sum_up()"/>
+            </form>
+        </div>
+        <p id="sumup"></p>
+    </div>
+</body>
+</html>

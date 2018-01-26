@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相册浏览系统</title>
+    <style type="text/css">
+        .box{
+            width: 1000px;
+            height: 580px;
+            padding: 20px;
+            margin: auto;
+            border: 2px dotted darkslategray;
+            box-sizing: border-box;
+            background: linear-gradient(to top, #7a7a7a, #e2e2e2);
+            border-radius: 10px;
+        }
+        #first{
+            position: absolute;
+            margin: 0 auto;
+            padding: 0;
+        }
+        #second{
+            position: absolute;
+            margin: 0 auto;
+            padding: 0;
+        }
+        #third{
+            position: absolute;
+            margin: 0 auto;
+            padding: 0;
+        }
+        #forth{
+            position: absolute;
+            margin: 0 auto;
+            padding: 0;
+        }
+        #arrowleft{
+            position: absolute;
+            top: 230px;
+            left: 500px;
+            padding: 0;
+            opacity:0.4;
+        }
+        #arrowright{
+            position: absolute;
+            top: 230px;
+            right: 500px;
+            margin: 0 auto;
+            padding: 0;
+            opacity:0.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img class="pic" id="first" src="image/Forza.jpg" alt="显示错误，无法加载！" width="960px" height="540px"/>
+        <img class="pic" id="second" src="image/GTS.jpg" alt="显示错误，无法加载！" width="960px" height="540px"/>
+        <img class="pic" id="third" src="image/NFS20.jpg" alt="显示错误，无法加载！" width="960px" height="540px"/>
+        <img class="pic" id="forth" src="image/ShadowOfWar.jpg" alt="显示错误，无法加载！" width="960px" height="540px"/>
+        <img id="arrowleft" src="image/arrowleft.jpg" alt="显示错误，无法加载！" width="80px" height="80px"/>
+        <img id="arrowright" src="image/arrowright.jpg" alt="显示错误，无法加载！" width="80px" height="80px"/>
+    </div>
+    <script type="text/javascript" src="JQuery/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        //num即页码
+        var num = 1;
+        $(document).ready(function () {
+            //初始布局
+            $(".pic").hide();
+            $("#first").show();
+            $("#arrowleft").hide();
+            $("#arrowright").hide();
+
+            //事件开始
+            $(".box").mouseover(function () {
+                $("#arrowleft").fadeIn("fast");
+                $("#arrowright").fadeIn("fast");
+            }).mouseout(function () {
+                $("#arrowleft").hide();
+                $("#arrowright").hide();
+            })
+            $("#arrowright").click(function () {
+                if(num<5)
+                {
+                    num++;
+                }
+                switch (num)
+                {
+                    case 2:$(".pic").hide();$("#second").fadeIn("normal");break;
+                    case 3:$(".pic").hide();$("#third").fadeIn("normal");break;
+                    case 4:$(".pic").hide();$("#forth").fadeIn("normal");break;
+                    case 5:num--;alert("已经是最后一张！");
+                }
+
+            }).mouseover(function () {
+                $(this).css("opacity","0.7");
+            }).mouseout(function () {
+                $(this).css("opacity","0.4");
+            });
+            $("#arrowleft").click(function () {
+                if(num>0)
+                num--;
+                switch (num)
+                {
+                    case 0:num++;alert("已经是第一张！");
+                    case 1:$(".pic").hide();$("#first").fadeIn("normal");break;
+                    case 2:$(".pic").hide();$("#second").fadeIn("normal");break;
+                    case 3:$(".pic").hide();$("#third").fadeIn("normal");break;
+                }
+            }).mouseover(function () {
+                $(this).css("opacity","0.7");
+            }).mouseout(function () {
+                $(this).css("opacity","0.4");
+            });
+        });
+    </script>
+</body>
+</html>

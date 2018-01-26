@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用call和prototype继承,类的建造使用构造函数</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script type="text/javascript">
+        function Person(name,chinese,math) {
+            this.name=name;
+            this.chinese=chinese;
+            this.math=math;
+            this.getName=function () {
+                alert("姓名："+this.name);
+            };
+            this.getChinese=function () {
+                alert("语文成绩："+this.chinese);
+            };
+            this.getMath=function () {
+                alert("数学成绩："+this.math);
+            };
+        }
+        function Student(name,chinese,math,age) {
+            //使用call方法继承父类的属性
+            Person.call(this,name,chinese,math);
+            this.age=age;
+            this.getAge=function () {
+                alert("年龄："+this.age);
+            };
+            this.PrintOnWin=function () {
+                var str="姓名："+this.name+"<br/>"+"语文成绩："+this.chinese+"<br/>"+"数学成绩："+this.math+"<br/>"+"年龄："+this.age;
+                document.getElementById("show").innerHTML=str;
+            };
+        }
+        //使用prototype方法继承父类
+        Student.prototype=new Person();
+        var Std0 = new Student("张三丰","84","93","18");
+        Std0.getName();
+        Std0.getChinese();
+        Std0.getMath();
+        Std0.getAge();
+        Std0.PrintOnWin();
+    </script>
+</body>
+</html>

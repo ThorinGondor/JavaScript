@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>肖赛哲理购物网——宇宙最大购物网站</title>
+    <style type="text/css">
+        span{
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        function remove(num)
+        {
+            var part = document.getElementById("box");
+            if(num==1)
+            {
+                var remove1 = document.getElementById("first");
+                part.removeChild(remove1);
+            }
+            else if(num==2)
+            {
+                var remove2 = document.getElementById("second");
+                part.removeChild(remove2);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div id="first">
+            <img src="image/NFS20.jpg" alt="显示错误，无法加载！" width="480" height="270" id="first_pic">
+            <span id="first_name">极品飞车20：偿还</span>
+            <span id="first_price">315.50</span>
+            <input type="number" max="10" name="number" step="1" value="1">
+            <input type="button" value="删除" onclick="remove(1)">
+        </div>
+        <div id="second">
+            <img src="image/GTS.jpg" alt="显示错误，无法加载！" width="480" height="270" id="second_pic">
+            <span id="second_name">GT Sport 跑车浪漫旅</span>
+            <span id="second_price">275.90</span>
+            <input type="number" max="10" name="number" step="1" value="1">
+            <input type="button" value="删除" onclick="remove(2)">
+        </div>
+    </div>
+</body>
+</html>

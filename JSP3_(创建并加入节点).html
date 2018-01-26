@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择你喜欢的游戏</title>
+    <script type="text/javascript">
+        function addPic()
+        {
+            var elem = document.getElementsByName("game");
+            var part = document.getElementsByTagName("div")[0];
+            if(elem[0].checked)
+            {
+                var Photo1 = document.createElement("img");
+                Photo1.setAttribute("src","image/Forza.jpg");
+                Photo1.setAttribute("title","极限竞速：地平线3");
+                Photo1.setAttribute("width","480");
+                Photo1.setAttribute("height","270");
+                part.appendChild(Photo1);
+            }
+            else if(elem[1].checked)
+            {
+                var Photo2 = document.createElement("img");
+                Photo2.setAttribute("src","image/GTS.jpg");
+                Photo2.setAttribute("title","跑车浪漫旅");
+                Photo2.setAttribute("width","480");
+                Photo2.setAttribute("height","270");
+                Photo2.setAttribute("onclick","copyNode()");
+                part.appendChild(Photo2);
+            }
+        }
+        function copyNode()
+        {
+            var part = document.getElementsByTagName("div")[0];
+            var copy = part.lastElementChild.cloneNode(false);
+            part.insertBefore(copy,part.firstChild);
+        }
+    </script>
+</head>
+<body>
+    <p>
+        选择你喜欢的游戏：
+        <input type="radio" name="game" onclick="addPic()"/>极限竞速：地平线3
+        <input type="radio" name="game" onclick="addPic()"/>GT Sport
+    </p>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person构造函数</title>
+</head>
+<body>
+    <p id="showInfo"></p>
+    <script type="text/javascript">
+        //原型函数prototype
+        function Person() {
+            Person.prototype.name="斯蒂芬库里";
+            Person.prototype.num="30";
+            Person.prototype.team="金州勇士";
+            Person.prototype.position="控球后卫";
+            Person.prototype.showInfo=function () {
+                document.getElementById("showInfo").innerHTML=this.name+";<br/>"+this.num+";<br/>"+this.team+";<br/>"+this.position+";<br/>"
+            }
+        }
+        var P0 = new Person();
+        P0.team="圣安东尼奥马刺";
+        P0.showInfo();
+    </script>
+</body>
+</html>

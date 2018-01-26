@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿冬奥列表内容</title>
+    <style type="text/css">
+        .box{
+            width:450px;
+            margin: auto;
+            border: 1px solid black;
+            box-sizing: border-box;
+            box-shadow: #a7a7a7 20px 20px 20px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            height: 30px;
+            line-height: 30px;
+            list-style-type: none;
+            padding-left: 10px;
+            border-bottom: 1px dashed blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>2020年冬季奥运会专题</h3>
+        <h4>祝福冬奥</h4>
+        <ul>
+            <li><a href="http://www.baidu.com/index.html">贝克汉姆：衷心希望北京能够申办成功！</a></li>
+            <li><a href="http://www.baidu.com/index.html">姚明：北京申冬奥是个非常棒的机会！加油！</a></li>
+            <li><a href="http://www.baidu.com/index.html">张虹：北京办冬奥，大家的热情超乎想象！</a></li>
+            <li><a href="http://www.baidu.com/index.html">肖恩怀特：我爱北京，支持北京申办冬奥会！</a></li>
+            <li><a href="http://www.baidu.com/index.html">赵宏博：北京申办冬奥会再合适不过了！</a></li>
+            <li>你喜欢哪些冬季奥运会的运动项目？<a href="http://www.baidu.com/index.html">（点击进入调查页)</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="JQuery/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".box :header").css({"background":"#2a65ba","color":"#ffffff","line-height":"30px","margin":"0px","padding-top":"5px","padding-bottom":"5px","padding-left":"25px"});
+            $(".box li:even").css("background","#cccccc");
+            $(".box li:odd").css("background","#f0f0f0");
+            $(".box li:lt(2) a").css("color","red"); //索引小于2的li元素的字体为红色
+            $(".box li:gt(3) a").css("color","blue"); //索引大于2的li元素的字体为蓝色
+            $(".box li:gt(3)").css("color","blue");  //索引大于2的li元素的字体为蓝色
+        });
+    </script>
+</body>
+</html>

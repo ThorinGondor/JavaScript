@@ -1,0 +1,22 @@
+h1{
+    font-size:25px;
+    color:black;
+    background: #4fb032;
+}
+
+ul h2{
+    font-size:16px;
+    color:#4D4D4D;
+}
+
+ul li:first-child{
+    font-size:14px;
+    color:#640000;
+}
+
+ul li:nth-child(2){
+    font-size:12px;
+    color:blue;
+}
+
+li{display:inline-block;}

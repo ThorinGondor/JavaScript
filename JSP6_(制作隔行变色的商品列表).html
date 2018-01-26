@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameStop商品列表</title>
+    <style type="text/css">
+        body{
+            background: #a9c0c0;
+        }
+        .box{
+            width: 1500px;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+            color: #c11b11;
+        }
+        table{
+            margin: 0 auto;
+        }
+        td{
+            text-align: center;
+        }
+        #head{
+            background: #5f58bc;
+        }
+        #tr0{
+            width: 500px;
+            height: 50px;
+            color: whitesmoke;
+        }
+        #tr1{
+            width: 400px;
+            color: whitesmoke;
+        }
+        #tr2{
+            width: 100px;
+            color: whitesmoke;
+        }
+        #tr3{
+            width: 100px;
+            color: whitesmoke;
+        }
+        #tr4{
+            width: 100px;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>GameStop商城:游戏购物车</h1>
+        <table border="1px">
+            <tr id="head">
+                <td id="tr0">缩略图</td>
+                <td id="tr1">商品</td>
+                <td id="tr2">单价</td>
+                <td id="tr3">数量</td>
+                <td id="tr4">操作</td>
+            </tr>
+            <tr id="first">
+                <td><img src="image/GTS.jpg" width="480" height="270" alt="显示错误，无法加载！"></td>
+                <td><strong>Gran Turismo Sport标准版 港版 数字版</strong></td>
+                <td>¥275</td>
+                <td>3</td>
+                <td><input type="button" value="删除" onclick="Delete1()"></td>
+            </tr>
+            <tr id="second">
+                <td><img src="image/MGSV.jpg" width="480" height="270" alt="显示错误，无法加载！"></td>
+                <td><strong>Metal Gear:Solid V 豪华版 港版 数字版</strong></td>
+                <td>¥375</td>
+                <td>2</td>
+                <td><input type="button" value="删除" onclick="Delete2()"></td>
+            </tr>
+            <tr id="third">
+                <td><img src="image/Forza.jpg" width="480" height="270" alt="显示错误，无法加载！"></td>
+                <td><strong>Forza Horizon 3 极限竞速：地平线3标准版 国行 光盘版</strong></td>
+                <td>¥325</td>
+                <td>4</td>
+                <td><input type="button" value="删除" onclick="Delete3()"></td>
+            </tr>
+            <tr id="forth">
+                <td><img src="image/FF15.jpg" width="480" height="270" alt="显示错误，无法加载！"></td>
+                <td><strong>Final Fantasy 15 最终幻想15 标准版 港版 光盘版</strong></td>
+                <td>¥420</td>
+                <td>1</td>
+                <td><input type="button" value="删除" onclick="Delete4()"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="JQuery/jquery-3.2.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //JQuery模块
+        $(document).ready(function () {
+            //JQuery初始化
+            $("table tr:not(#head):even").css("background","#f0f0f0");
+            $("table tr:not(#head):odd").css("background","#d8d8d8");
+        });
+
+        //JSP模块
+        function Delete1() {
+            prompt("确定要删除吗？");
+            document.getElementById("first").style.display="none";
+        }
+        function Delete2() {
+            document.getElementById("second").style.display="none";
+        }
+        function Delete3() {
+            document.getElementById("third").style.display="none";
+        }
+        function Delete4() {
+            document.getElementById("forth").style.display="none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scroll和offset演示</title>
+</head>
+<body>
+    <div id="adver">
+        <img src="image/Barnes.jpg" width="133" height="200" alt="显示错误，无法加载！">
+    </div>
+    <div id="main">
+        <img src="image/Forza.jpg" alt="显示错误，无法加载！">
+        <img src="image/NFS20.jpg" alt="显示错误，无法加载！">
+        <img src="image/GTS.jpg" alt="显示错误，无法加载！">
+        <img src="image/FF15.jpg" alt="显示错误，无法加载！">
+    </div>
+    <script src="JQuery/jquery-3.2.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var adverTop = parseInt($("#adver").top());
+        var adverLeft = parseInt($("#adver").left());
+        alert(adverTop);
+        $(window).scroll(function () {
+            var scrollTop = parseInt($(this).scrollTop());
+            var scrollLeft = parseInt($(this).scrollLeft());
+            $("#adver").offset({top:scrollTop+adverTop});
+            $("#adver").offset({left:scrollLeft+adverLeft});
+        });
+    </script>
+</body>
+</html>
